@@ -19,7 +19,7 @@ endif
    " normal mode (nmap), we will map it to start VimDebug. Otherwise,
    " to start the debugger one can call DBGRstart(...) or use the GUI
    " with its menu interface.
-let s:cfg_startKey = "<F12>"
+let s:cfg_startKey = "<F10>"
 
    " GUI menu label.
 let s:cfg_menuLabel = '&Debugger'
@@ -30,20 +30,20 @@ let s:cfg_interface = [
  \ ['<F7>',       '&Step in',                'DBGRstep()'],
  \ ['<F6>',       'Step &out',               'DBGRstepout()'],
  \ ['<F9>',       '&Continue',               'DBGRcont()'],
- \ ['<Leader>b',  'Set &breakpoint',         'DBGRsetBreakPoint()'],
- \ ['<Leader>c',  'C&lear breakpoint',       'DBGRclearBreakPoint()'],
- \ ['<Leader>ca', 'Clear &all breakpoints',  'DBGRclearAllBreakPoints()'],
+ \ ['<Leader>B',  'Set &breakpoint',         'DBGRsetBreakPoint()'],
+ \ ['<Leader>C',  'C&lear breakpoint',       'DBGRclearBreakPoint()'],
+ \ ['<Leader>CA', 'Clear &all breakpoints',  'DBGRclearAllBreakPoints()'],
  \ ['<Leader>x/', '&Print value',            'DBGRprint(inputdialog("Value to print: "))'],
  \ ['<Leader>x',  'Print &value here',       'DBGRprint(expand("<cword>"))'],
  \ ['<Leader>/',  'E&xecute command',        'DBGRcommand(inputdialog("Command to execute: "))'],
- \ ['<F10>',      '&Restart',                'DBGRrestart()'],
- \ ['<F11>',      '&Quit',                   'DBGRquit()'],
+" \ ['<F10>',     '&Restart',                'DBGRrestart()'],
+" \ ['<F11>',      '&Quit',                   'DBGRquit()'],
 \]
 
    " Global variables. Each entry has: global variable name, default
    " value.
 let s:cfg_globals = {
- \ 'g:DBGRconsoleHeight'  : 7,
+ \ 'g:DBGRconsoleHeight'  : 14,
  \ 'g:DBGRlineNumbers'    : 1,
  \ 'g:DBGRshowConsole'    : 1,
  \ 'g:DBGRdebugArgs'      : "",
